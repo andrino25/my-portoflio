@@ -11,6 +11,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
 
+  useEffect(() => {
+    document.title = "My Portfolio";
+  }, []);
+
   return (
     <div className="App">
       <Router> 

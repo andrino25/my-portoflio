@@ -5,6 +5,7 @@ import shibuyaImg from '../assets/shibuya.png';
 import capstoneImg from '../assets/people-connect.png';
 import gagambrawlImg from '../assets/gagambrawl.png';
 import extrImg from '../assets/extr.png';
+import adminImg from '../assets/admin.png';
 
 const CustomDialog = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -92,6 +93,12 @@ const Works = () => {
       description: "A web application for expense management and monitoring",
       image: extrImg,
       link: ""
+    },
+    {
+      title: "PeopleConnect Admin (Capstone)",
+      description: "A web application for tracking and monitoring the mobile version of the capstone project.",
+      image: adminImg,
+      link: "https://github.com/Kevinboo123/TheAdminPeopleConnect"
     }
   ];
 
