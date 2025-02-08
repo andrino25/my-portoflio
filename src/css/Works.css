@@ -1,0 +1,220 @@
+/* Works.css */
+.works-container {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #0d1117;
+}
+
+.works-container h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.works-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-section1 1s ease-out forwards;
+}
+
+.works-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #00ff88;
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-section1 1.2s ease-out forwards;
+}
+
+.project-card {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.project-info p {
+  color:rgba(255, 255, 255, 0.781);
+  margin-bottom: 1rem;
+}
+
+.view-project {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #00ff88;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Default state before animation */
+.fade-in-section1 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When section is visible */
+.fade-in-section1.visible {
+  animation: fade-in-section1 0.8s ease-out forwards;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .fade-in-section1 {
+      transform: translateY(20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .fade-in-section1 {
+      transform: translateY(15px);
+  }
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.dialog-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  opacity: 0;
+  background-color: transparent;
+  border: 2px solid #00ff88;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dialog-content.dialog-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dialog-close-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.dialog-close-btn:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.private-project {
+  background-color: #777 !important;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.private-project:hover {
+  background-color: #666 !important;
+  transform: scale(1.05);
+}
+
+.view-project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 255, 136, 0.4);
+  background-color: rgba(0, 255, 136, 0.15);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .works-container {
+      padding: 3rem 1rem;
+  }
+  
+  .projects-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fade-in-section1 {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
