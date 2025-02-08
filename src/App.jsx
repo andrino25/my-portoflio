@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Works from './pages/Works';
 import Contact from './pages/Contact';
-import Navbar from './utils/NavBar';
+import Navbar from './pages/NavBar';
 import Resume from "./pages/Resume";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
