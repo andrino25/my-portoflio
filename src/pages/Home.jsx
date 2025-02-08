@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import '../css/Home.css';
-import profileImg from '../assets/profile.jpg';
 
 const Home = () => {
   const observerRef = useRef(null);
@@ -33,7 +32,7 @@ const Home = () => {
       {/* Background Image Container */}
       <div className="background-container">
         <img 
-          src={profileImg} 
+          src= "https://images.wallpapersden.com/image/download/programming-coding-language_bGhpbm6UmZqaraWkpJRmbmdlrWZlbWU.jpg"
           alt="Background" 
           className="background-image"
         />

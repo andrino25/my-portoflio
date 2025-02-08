@@ -38,6 +38,7 @@
   width: 100%;
 }
 
+
 /* Card Styles */
 .about-card, .skills-card, .experience-card, .education-card, .interests-card, .contact-card {
   background-color: rgba(255, 255, 255, 0.05);
@@ -77,8 +78,16 @@
   text-align: center;
 }
 
+.skill-tags {
+  display: inline-block;
+  padding: 1.2rem 0;
+  justify-items: center;
+  align-items: center;
+}
+
+
 /* Skills & Interests */
-.skill-tags, .interest-tags {
+.interest-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -86,7 +95,7 @@
   margin-top: 1rem;
 }
 
-.skill-tag, .interest-tag {
+ .interest-tag {
   background-color: #00ff88;
   color: #000000;
   padding: 0.6rem 1.2rem;
@@ -96,7 +105,7 @@
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.skill-tag:hover, .interest-tag:hover {
+.interest-tag:hover {
   background-color: #00e676;
   transform: scale(1.1);
 }
@@ -131,6 +140,32 @@
 .social-icon:hover img {
   transform: scale(1.2);
 }
+
+.skill-tag:hover {
+  transform: scale(1.1);
+}
+
+.skill-icon {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  background: transparent;
+  transition: transform 0.3s ease;
+  width: 60px;
+  height: 60px;
+  border-color: #00ff88;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-icon:hover{
+  transform: translateY(-4px);
+  border-color: #00ff88;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+}
+
 
 /* Animation */
 @keyframes fadeInUp {
