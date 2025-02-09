@@ -23,6 +23,39 @@ const About = () => {
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
 
+  // Langauges mapping
+  const skills = [
+
+    // Frontend Development
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/others/html.svg", alt: "HTML5" },
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/others/css.svg", alt: "CSS3" },
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/1ac69ce5fbc389725f16f989fa53c62d6e1b4883/social%20icons/javascript.svg", alt: "JavaScript" },
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/react.svg", alt: "React.js" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s", alt: "Tailwind CSS" },
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/boostrap.svg", alt: "Bootstrap" },
+
+
+    // Backend Development
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/c%23.svg", alt: "C#" },
+    { src: "https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-3d-icon-download-in-png-blend-fbx-gltf-file-formats--javascript-runtime-backend-node-js-logo-coding-lang-pack-logos-icons-7578002.png?f=webp", alt: "Node.js" },
+    { src: "https://firebase.google.com/static/images/brand-guidelines/logo-logomark.png", alt: "Firebase" },
+    { src: "https://seeklogo.com/images/M/mysql-logo-B4943FE6DD-seeklogo.com.png", alt: "MySQL" },
+    { src: "https://ciodimension.com/wp-content/uploads/2024/09/mongo.png", alt: "MongoDB" },
+
+    // Mobile Development
+    { src: "https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/kotlin.svg", alt: "Kotlin" },
+  
+    // Web Hosting & Deployment
+    { src: "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-256x256.png", alt: "Vercel" },
+    { src: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/gkq3dkkfkec8edd6fuay", alt: "Render" },
+  
+    // Version Control & Tools
+    { src: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png", alt: "Git & GitHub" },
+    { src: "https://www.applivery.com/wp-content/uploads/2024/09/Postman.png", alt: "Postman" },
+    { src: "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png", alt: "Figma" },
+
+  ];
+
   return (
     <div className="about-container" id="about">
       <h2 className="section-title fade-section">About Me</h2>
@@ -52,53 +85,18 @@ const About = () => {
               className="section-image" 
             />
           </div>
-        <div className="card-content">
-          <h3>Quite familiar with the following fields:</h3>
-
-          
-          {/* Mobile Development */}
-          <h4>Mobile Development</h4>
-          <div className="skill-tags">
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/kotlin.svg" alt="Kotlin" className="skill-icon" />
-          </div>
-
-          {/* Web Hosting & Deployment */}
-          <h4>Web Hosting & Deployment</h4>
-          <div className="skill-tags">
-              <img src="https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/apple-touch-icon-256x256.png" alt="Vercel" className="skill-icon" />
-              <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/gkq3dkkfkec8edd6fuay" alt="Render" className="skill-icon" />
-          </div>
-
-          {/* Version Control & Tools */}
-          <h4>Version Control & Tools</h4>
-          <div className="skill-tags">
-              <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png" alt="Git & GitHub" className="skill-icon" />
-              <img src="https://www.applivery.com/wp-content/uploads/2024/09/Postman.png" alt="Postman" className="skill-icon" />
-              <img src="https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png" alt="Figma" className="skill-icon" />
-          </div>
-
-          {/* Backend Development */}
-          <h4>Backend Development</h4>
-          <div className="skill-tags">
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/programming%20languages/c%23.svg" alt="C#" className="skill-icon" />
-              <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-3d-icon-download-in-png-blend-fbx-gltf-file-formats--javascript-runtime-backend-node-js-logo-coding-lang-pack-logos-icons-7578002.png?f=webp" alt="Node.js" className="skill-icon" />
-              <img src="https://firebase.google.com/static/images/brand-guidelines/logo-logomark.png" alt="Firebase" className="skill-icon" />
-              <img src="https://seeklogo.com/images/M/mysql-logo-B4943FE6DD-seeklogo.com.png" alt="MySQL" className="skill-icon" />
-              <img src="https://ciodimension.com/wp-content/uploads/2024/09/mongo.png" alt="MongoDB" className="skill-icon" />
-          </div>
-
-          {/* Frontend Development */}
-          <h4>Frontend Development</h4>
-          <div className="skill-tags">
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/others/html.svg" alt="HTML5" className="skill-icon" />
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/others/css.svg" alt="CSS3" className="skill-icon" />
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/1ac69ce5fbc389725f16f989fa53c62d6e1b4883/social%20icons/javascript.svg" alt="JavaScript" className="skill-icon" />
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/react.svg" alt="React.js" className="skill-icon" />
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s" alt="Tailwind CSS" className="skill-icon" />
-              <img src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/7c0ac2ceb9f9d24992ec393d11fa7337d2f92466/frameworks/boostrap.svg" alt="Bootstrap" className="skill-icon" />
+          <div className="card-content">
+            <h3>Quite familiar with the following fields:</h3>
+            
+            <div className="skills-carousel">
+              <div className="carousel-track">
+                {[...skills, ...skills].map((skill, index) => (
+                  <img key={index} src={skill.src} alt={skill.alt} className="skill-icon" />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
         {/* Experience Section */}
         <div className="experience-card fade-section">

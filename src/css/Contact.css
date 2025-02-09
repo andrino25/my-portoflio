@@ -1,66 +1,214 @@
-/* Contact.css */
+/* Base styles remain the same */
 .contact-container {
-    min-height: 100vh;
-    padding: 4rem 2rem;
-    background-color: #0d1117;
-  }
-  
-  .contact-container h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #333;
-  }
-  
-  .contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .contact-item:hover {
-    transform: translateX(10px);
-  }
-  
-  .contact-item i {
-    font-size: 1.5rem;
-    color: #007bff;
-  }
-  
-  .contact-item a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .contact-item a:hover {
-    color: #007bff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  margin: 100px auto !important; 
+}
+
+.contact-header {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.contact-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.contact-header p {
+  margin: 0;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 8px;
+  color: #00ff88;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: rgba(0, 255, 136, 0.2);
+  transform: translateY(-1px);
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-image,
+.github-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    width: 80%;
+    margin: 80px auto 3rem;
+    padding: 30px;
   }
 
-  
-
-  
-  @media (max-width: 768px) {
-    .contact-container {
-      padding: 3rem 1rem;
-    }
-    
-    .contact-item {
-      padding: 0.8rem;
-    }
+  .contact-header h2 {
+    font-size: 24px;
   }
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .social-image,
+  .github-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    margin: 6rem auto 2rem;
+    padding: 20px;
+  }
+
+  .contact-header h2 {
+    font-size: 22px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .contact-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .social-image,
+  .github-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contact-container {
+    margin: 50px auto 1rem;
+    padding: 15px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+  
+  .social-links {
+    gap: 8px;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1200px) {
+  .contact-container {
+    margin: 130px auto 6rem;
+  }
+}
+
+/* Handle viewport height on mobile */
+@media screen and (max-height: 800px) {
+  .contact-container {
+    margin: 70px auto 2rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

@@ -78,13 +78,6 @@
   text-align: center;
 }
 
-.skill-tags {
-  display: inline-block;
-  padding: 1.2rem 0;
-  justify-items: center;
-  align-items: center;
-}
-
 
 /* Skills & Interests */
 .interest-tags {
@@ -116,6 +109,33 @@
   padding: 0;
   margin: 0;
 }
+
+.skills-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  align-items: center;
+  animation: scrollLoop 15s linear infinite;
+  width: max-content;
+}
+
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / 2)); /* Moves only half the duplicated set */
+  }
+}
+
 
 .experience-card ul li {
   margin-top: 10px;
@@ -149,13 +169,13 @@
   display: inline-block;
   padding: 5px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   background: transparent;
   transition: transform 0.3s ease;
   width: 60px;
   height: 60px;
   border-color: #00ff88;
-  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -209,7 +229,7 @@
       height: 120px;
   }
   
-  .skill-tags, .interest-tags {
+ .interest-tags {
       gap: 0.4rem;
   }
   
