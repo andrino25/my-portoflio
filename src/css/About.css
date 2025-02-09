@@ -186,6 +186,32 @@
   box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
 }
 
+.skill-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.skill-label {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.skill-wrapper:hover .skill-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
 
 /* Animation */
 @keyframes fadeInUp {

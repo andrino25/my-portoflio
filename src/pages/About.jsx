@@ -50,9 +50,14 @@ const About = () => {
     { src: "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/gkq3dkkfkec8edd6fuay", alt: "Render" },
   
     // Version Control & Tools
-    { src: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png", alt: "Git & GitHub" },
+    { src: "https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_640.png", alt: "GitHub" },
     { src: "https://www.applivery.com/wp-content/uploads/2024/09/Postman.png", alt: "Postman" },
     { src: "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png", alt: "Figma" },
+
+    //Others
+    { src: "https://images.saasworthy.com/witai_30099_logo_1652706679_wqtz0.png", alt: "Wit ai" },
+    { src: "https://cdn.worldvectorlogo.com/logos/robot-framework.svg", alt: "Robot" },
+    { src: "https://img.icons8.com/?size=512&id=38553&format=png", alt: "Selenium" },
 
   ];
 
@@ -88,12 +93,13 @@ const About = () => {
           <div className="card-content">
             <h3>Quite familiar with the following fields:</h3>
             
-            <div className="skills-carousel">
-              <div className="carousel-track">
-                {[...skills, ...skills].map((skill, index) => (
-                  <img key={index} src={skill.src} alt={skill.alt} className="skill-icon" />
-                ))}
-              </div>
+            <div className="carousel-track">
+              {[...skills, ...skills].map((skill, index) => (
+                <div key={index} className="skill-wrapper">
+                  <img src={skill.src} alt={skill.alt} className="skill-icon" />
+                  <span className="skill-label">{skill.alt}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
