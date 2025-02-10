@@ -71,7 +71,7 @@ const Works = () => {
       title: "Simple Content Based Filtering Algorithm ",
       description: "A python script related to our capstone project filtering out service recommendations categories.",
       image: "https://miro.medium.com/v2/resize:fit:1400/0*dWxRDPTf891yhxlI.png",
-      link: "https://github.com/andrino25/algp_api_server"
+      link: ""
     }
   ];
 
